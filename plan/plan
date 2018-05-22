@@ -1,0 +1,27 @@
+V 1. Create TABLE 
+V 2. CRUD
+3. create views
+
+
+1. Create Table :
+a. 
+CREATE TABLE `employees` (
+  `id` int(6) unsigned NOT NULL,
+  `name` varchar(50) DEFAULT NULL,
+  `hiredate` date DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+2.CRUD
+---------------------------------------------------------------------------------------------------
+create :
+INSERT INTO `missionphp`.`employees`(`id`,`name`,`hiredate`)VALUES(1 ,"yossef" , "2018-05-04");
+---------------------------------------------------------------------------------------------------
+read : 
+SELECT `employees`.`id`,`employees`.`name`,`employees`.`hiredate`FROM `missionphp`.`employees` WHERE id = 1;
+---------------------------------------------------------------------------------------------------
+update :
+UPDATE `missionphp`.`employees` SET `name` = "Pierre" ,`hiredate` = "2018-01-01" WHERE `id` = 1;
+---------------------------------------------------------------------------------------------------
+delete : 
+DELETE FROM `missionphp`.`employees` WHERE id = 1;
